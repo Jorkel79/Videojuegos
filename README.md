@@ -11,4 +11,4 @@ Importaciones Necesarias
 1.- Base de datos
 
 La base de datos es necesaria importarla en phpmyadmin y 
-se encuentra ubicada dentro de la carpeta Proyecto_Videojuegos
+se encuentra ubicada al nivel de la carpeta Proyecto_Videojuegos
