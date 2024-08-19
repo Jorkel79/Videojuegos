@@ -9,7 +9,7 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #1b1726;
+    background-color: #5027c2;
 }
 
 img{
@@ -22,7 +22,7 @@ img{
 }
 
 .header{
-    background-image: url(images/images/bg.jpg);
+    background-image: url(images/images/bg2.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -90,7 +90,7 @@ img{
 
 .header-txt h1{
     font-size: 60px;
-    color: #ffffff;
+    color: #2bce0a;
     line-height: 1.3;
     margin-bottom: 25px;
 }
@@ -101,7 +101,7 @@ img{
 
 .header-txt p{
     font-size: 20px;
-    color: #e0e0e0;
+    color: #000000;
     margin-bottom: 45px;
 }
 
