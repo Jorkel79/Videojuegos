@@ -1,27 +1,4 @@
 <?php
-session_start();
-
-// Verificar sesión activa y redirigir si es necesario
-if (isset($_SESSION['usuario'])) {
-    // La sesión está activa, puedes redirigir a la página de inicio
-    header("Location: tabla.php");
-    exit();
-}
-
-// Verificar inactividad y cerrar sesión
-$inactivity_timeout = 60; // 1 minuto
-
-if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > $inactivity_timeout)) {
-    session_unset(); // Limpia todas las variables de sesión
-    session_destroy(); // Destruye la sesión
-    $logout_message = "Tu sesión ha sido cerrada automáticamente debido a inactividad."; // Mensaje para mostrar en la alerta
-    $_SESSION['logout_message'] = $logout_message; // Almacena el mensaje en una variable de sesión
-    header("Location: login.php"); // Redirige a la página de inicio de sesión después del cierre de sesión
-    exit();
-}
-
-// Actualiza el tiempo de la última actividad
-$_SESSION['last_activity'] = time();
 
 
 require_once(__DIR__ . "/../head/head.php");
@@ -136,7 +113,7 @@ $categorias = array_unique(array_column($videojuegos, 'categoria'));
                             <?php if (isset($row["aniodelanzamiento"])): ?>
                                 <h3><?= htmlspecialchars($row["aniodelanzamiento"]) ?></h3>
                             <?php endif; ?>
-                            <a href="show.php" >Ver</a>
+                            <a href="show.php">Ver</a>
                             <div class="price">
                                 <!-- Resto del código para mostrar cada registro -->
                             </div>
@@ -166,7 +143,7 @@ $categorias = array_unique(array_column($videojuegos, 'categoria'));
         <div class="link">
             <ul>
                 <li><a href="">Inicio</a></li>
-                <li><a href="">Iniciar Sesion</a></li>
+                <li><a href="login.php">Iniciar Sesion</a></li>
             </ul>
         </div>
     </footer>

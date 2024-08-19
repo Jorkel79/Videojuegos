@@ -17,6 +17,7 @@
                 <ul>
                     <li><a href="../username/index.php">Inicio</a></li>
                     <li><a href="../username/login.php">Iniciar Sesion</a></li>
+                    <li><a href="../username/tabla.php">tabla</a></li>
                 </ul>
             </nav>
     </div>

@@ -3,11 +3,6 @@ session_start();
 
 require_once(__DIR__ . "/../head/headadmin.php");
 
-// Verificar si el usuario ha iniciado sesión
-if (!isset($_SESSION['usuario'])) {
-    header("Location: login.php"); // Redirigir al usuario al inicio de sesión si no ha iniciado sesión
-    exit();
-}
 
 // Datos estáticos de videojuegos en lugar de usar la base de datos
 $videojuegos = [
