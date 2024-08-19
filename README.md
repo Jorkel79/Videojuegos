@@ -12,3 +12,9 @@ Importaciones Necesarias
 
 La base de datos es necesaria importarla en phpmyadmin y 
 se encuentra ubicada al nivel de la carpeta Proyecto_Videojuegos
+
+
+Datos de inicio de sesion:
+
+nombre:jasc
+Contraseña:Jasc121.
