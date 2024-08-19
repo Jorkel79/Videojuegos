@@ -1,16 +1,11 @@
 <?php
+// Iniciar sesión
+session_start();
 
-//logout.php
-
-include('config.php');
-
-//Reset OAuth access token
-$google_client->revokeToken();
-
-//Destroy entire session data.
+// Destruir todas las sesiones (si deseas mantener esto)
 session_destroy();
 
-//redirect page to index.php
-header('location:index.php');
-
+// Redirigir al formulario de login
+header("Location: login.php");
+exit();
 ?>
