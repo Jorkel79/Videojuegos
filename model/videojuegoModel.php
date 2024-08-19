@@ -1,7 +1,3 @@
-<<<<<<< HEAD:model/videojuegoModel.php
-<<<<<<< HEAD
-=======
->>>>>>> 4e81910dd553fcae06459837210cb6717b8e4fcd:Proyecto_Videojuegos/model/videojuegoModel.php
 <?php
 
     class videojuegoModel{
