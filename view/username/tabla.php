@@ -2,7 +2,6 @@
 session_start();
 
 require_once(__DIR__ . "/../head/headadmin.php");
-require_once(__DIR__ . "/../../controller/videojuegoController.php");
 
 // Verificar si el usuario ha iniciado sesión
 if (!isset($_SESSION['usuario'])) {
@@ -10,12 +9,29 @@ if (!isset($_SESSION['usuario'])) {
     exit();
 }
 
+// Datos estáticos de videojuegos en lugar de usar la base de datos
+$videojuegos = [
+    [
+        'id' => 1,
+        'nombre' => 'Valorant',
+        'aniodelanzamiento' => '2020',
+        'plataforma' => 'PC',
+        'categoria' => 'Shooter'
+    ],
+    [
+        'id' => 2,
+        'nombre' => 'The Witcher 3',
+        'aniodelanzamiento' => '2015',
+        'plataforma' => 'PC, PS4, Xbox',
+        'categoria' => 'RPG'
+    ],
+    // Puedes agregar más videojuegos aquí si lo deseas
+];
 
-// Resto de tu código de tabla.php
-$obj = new videojuegoController();
-$rows = $obj->index();
-$row = $rows;
+// Reemplazar la consulta con datos estáticos
+$rows = $videojuegos;
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,24 +60,25 @@ $row = $rows;
             <?php if($rows): ?>
                 <?php foreach($rows as $row): ?>
                     <tr>
-                        <td><?= $row["nombre"]?></td>
-                        <td><?= $row["aniodelanzamiento"]?></td>
-                        <td><?= $row["plataforma"]?></td>
-                        <td><?= $row["categoria"]?></td>
+                        <td><?= htmlspecialchars($row["nombre"]) ?></td>
+                        <td><?= htmlspecialchars($row["aniodelanzamiento"]) ?></td>
+                        <td><?= htmlspecialchars($row["plataforma"]) ?></td>
+                        <td><?= htmlspecialchars($row["categoria"]) ?></td>
                         <td>
-                            <a href="edit.php?id=<?=$row["id"]?>" class="btn-2">Modificar</a>
-                            <a href="delete.php?id=<?=$row["id"]?>" class="btn-2">Eliminar</a>
+                            <a href="edit.php?id=<?= htmlspecialchars($row["id"]) ?>" class="btn-2">Modificar</a>
+                            <a href="delete.php?id=<?= htmlspecialchars($row["id"]) ?>" class="btn-2">Eliminar</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
-            <?php else:?>  
-            <?php endif; ?> 
+            <?php else: ?>
+                <tr>
+                    <td colspan="5">No hay videojuegos disponibles.</td>
+                </tr>
+            <?php endif; ?>
         </table>
     </div>  
-    <!-- ... Tu código HTML anterior ... -->
 
-<script>
-    
+    <script>
         // Realiza una solicitud AJAX cada 5 minutos (300,000 milisegundos)
         setInterval(function() {
             var xmlhttp = new XMLHttpRequest();
@@ -69,9 +86,5 @@ $row = $rows;
             xmlhttp.send();
         }, 300000);
     </script>
-
-</body>
-</html>
-
 </body>
 </html>
