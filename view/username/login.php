@@ -9,9 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="alertas.js"></script>
 
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <body>
 <div class="wrapper">
@@ -64,9 +63,10 @@
         var usuario = document.getElementById('user').value;
         var contrasenia = document.getElementById('pass').value;
 
-        if (usuario === 'jasc' && contrasenia === 'Jasc121.') {
+        if (usuario === 'admin' && contrasenia === 'admin') {
             // Inicio de sesión exitoso
-            iniciarSesion(usuario);
+            alert("Inicio de sesión exitoso");
+            window.location.href = './index.php'; // Redirige a una página ficticia de inicio
         } else {
             // Inicio de sesión fallido
             intentosFallidos++;
@@ -79,24 +79,6 @@
                 document.querySelector('.input-submit').disabled = true;
             }
         }
-    }
-
-    function iniciarSesion(usuario) {
-        // Inicia la sesión
-        $.ajax({
-            type: 'POST',
-            url: 'ProcessLogin.php', // Aquí debes especificar el archivo PHP para iniciar sesión
-            data: { usuario: usuario },
-            success: function(response) {
-                if (response === 'success') {
-                    // Sesión iniciada correctamente
-                    window.location.href = 'tabla.php';
-                } else {
-                    // Error al iniciar sesión
-                    alert("Error al iniciar sesión. Inténtalo de nuevo.");
-                }
-            }
-        });
     }
 </script>
 
