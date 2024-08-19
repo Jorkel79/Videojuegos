@@ -50,7 +50,7 @@ $rows = $obj->index();
                 <p>
                     Jorge Raul Valencia Santos,
                     Jose Alfredo Salinas Caudillo,
-                    Cristian de Jesus Vergara Valerio.
+                    Diego Alberto Canto Ricardez
                 </p>
                 <div class="butons">
                     <a href="" class="btn-1">Informacion</a>
