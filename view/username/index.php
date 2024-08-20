@@ -13,7 +13,7 @@ $videojuegos = [
         'aniodelanzamiento' => '2020',
         'plataforma' => 'PC',
         'categoria' => 'Shooter',
-        'imagenurl' => 'https://example.com/image1.jpg'
+        'imagenurl' => 'https://th.bing.com/th/id/OIP.GSnO2Eie9NtsS83kIh-67QHaEK?rs=1&pid=ImgDetMain'
     ],
     [
         'id' => 2,
@@ -21,7 +21,7 @@ $videojuegos = [
         'aniodelanzamiento' => '2015',
         'plataforma' => 'PC, PS4, Xbox',
         'categoria' => 'RPG',
-        'imagenurl' => 'https://example.com/image2.jpg'
+        'imagenurl' => 'https://th.bing.com/th/id/R.6ef0f5fd9f0b5be0081f8623ab967ecd?rik=gLDb%2bYX4aosk6A&pid=ImgRaw&r=0'
     ],
     [
         'id' => 3,
@@ -29,7 +29,7 @@ $videojuegos = [
         'aniodelanzamiento' => '2020',
         'plataforma' => 'PC, PS4, Xbox',
         'categoria' => 'RPG',
-        'imagenurl' => 'https://example.com/image3.jpg'
+        'imagenurl' => 'https://th.bing.com/th/id/OIP.VRVOqssvGozbya5mu9qKXAHaEK?rs=1&pid=ImgDetMain'
     ],
 ];
 
