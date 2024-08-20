@@ -48,6 +48,10 @@
                     <td><strong>Conocimientos</strong></td>
                     <td>PHP, HTML, CSS, LARAVEL, GITHUB, JAVASCRIPT, IONIC</td>
                 </tr>
+                <tr>
+                    <td><strong>Contactos</strong></td>
+                    <td>921-310-7823 // dsm20190379j.valencia@utsv.edu.mx</td>
+                </tr>
             </tbody>
         </table>
         <div class="text-center">
