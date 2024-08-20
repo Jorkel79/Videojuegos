@@ -19,6 +19,7 @@
                     <li><a href="../username/login.php">Iniciar Sesion</a></li>
                     <li><a href="../username/tabla.php">tabla</a></li>
                     <li><a href="../username/conocenos.php">Conocenos</a></li>
+                    <li><a href="../username/paginajose.php">Jose Salinas</a></li>
                 </ul>
             </nav>
     </div>
